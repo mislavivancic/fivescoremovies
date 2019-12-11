@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="movie_button_height">62dp</dimen>
+    <dimen name="list_text_padding">5dp</dimen>
+    <dimen name="title_font_size">24sp</dimen>
+    <dimen name="overview_font_size">18sp</dimen>
+
+    <dimen name="scale_rating_stars">1</dimen>
+    <dimen name="scale_rating_listStars">1.7</dimen>
+    <dimen name="scale_movie_poster">1</dimen>
+
+    <dimen name="divider_width">1dp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+
+    <dimen name="rating_bar_step">0.05</dimen>
+    <dimen name="rating_bar_width">234dp</dimen>
+    <dimen name="rating_bar_height">54dp</dimen>
+    <dimen name="rating_bar_marginStart">0dp</dimen>
+    <dimen name="rating_bar_marginStartList">20dp</dimen>
+
+    <dimen name="imageView_marginEnd">0dp</dimen>
+    <dimen name="imageView_marginStart">0dp</dimen>
+    <dimen name="imageView_marginTop">0dp</dimen>
+
+    <dimen name="imageViewList_width">126dp</dimen>
+    <dimen name="imageViewList_height">155dp</dimen>
+
+    <dimen name="movieTitle_textView_marginStart">4dp</dimen>
+    <dimen name="movieTitle_textView_marginTop">2dp</dimen>
+
+    <dimen name="movieOverview_textView_width">368dp</dimen>
+    <dimen name="movieOverview_textView_marginEnd">2dp</dimen>
+    <dimen name="movieOverview_textView_marginStart">4dp</dimen>
+
+    <dimen name="linearLayout_marginTop">28dp</dimen>
+    <dimen name="linearLayout_movieTitle_marginTop">0dp</dimen>
+
+    <dimen name="voteCount_textView_marginBottom">8dp</dimen>
+    <dimen name="voteCount_textView_marginEnd">8dp</dimen>
+    <dimen name="voteCount_textView_marginStart">8dp</dimen>
+    <dimen name="voteCount_textView_marginTop">8dp</dimen>
+
+    <dimen name="standard_margin_value">8dp</dimen>
+
+    <dimen name="title_row_marginTop">16dp</dimen>
+
+    <dimen name="zeroDp_textView_width">0dp</dimen>
+
+    <dimen name="layoutAbsoulteX">16dp</dimen>
+
+    <integer name="numberOfStarsDetails">5</integer>
+    <integer name="stroke_width">15</integer>
+    <integer name="favourite_width_height">550</integer>
+
+    <dimen name="favourite_button_dimen">25dp</dimen>
+    <dimen name="favourite_button_dimen_heart">20dp</dimen>
+    <dimen name="top_margin_main">55dp</dimen>
+
+    <dimen name="list_item_height_margin">2dp</dimen>
+    <dimen name="list_item_width_margin">0dp</dimen>
+
+</resources>

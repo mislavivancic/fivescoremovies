@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion project.ext.compileSdkVersion
+    buildToolsVersion project.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.example.movieapp"
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode project.ext.versionCode
+        versionName project.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$project.ext.appCompatVersion"
+    implementation "androidx.core:core-ktx:$project.ext.coreKtxVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$project.ext.constraintLayout"
+    testImplementation "junit:junit:$project.ext.jUnitVersion"
+    androidTestImplementation "androidx.test:runner:$project.ext.runnerVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$project.ext.expressoCoreVersion"
+    implementation "com.squareup.retrofit2:retrofit:$project.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$project.ext.converterGsonVersion"
+    implementation "com.squareup.moshi:moshi-kotlin:$project.ext.moshiVersion"
+    implementation "com.android.support:recyclerview-v7:$project.ext.recycleViewVersion"
+    implementation "com.squareup.retrofit2:converter-moshi:$project.ext.moshiConverterVersion"
+    implementation "com.github.bumptech.glide:glide:$project.ext.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$project.ext.glideCompilerVersion"
+    implementation "org.koin:koin-android:$project.ext.koin_version"
+    implementation "org.koin:koin-android-viewmodel:$project.ext.koin_version"
+    implementation "io.reactivex.rxjava2:rxjava:$project.ext.rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$project.ext.rxAndroidVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$project.ext.rxJavaAdapterVersion"
+
+    implementation "androidx.room:room-runtime:$project.ext.roomVersion"
+    kapt "android.arch.persistence.room:compiler:$project.ext.roomVersion" // For Kotlin use kapt instead of annotationProcessor
+    implementation "androidx.room:room-ktx:$project.ext.roomVersion" // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-rxjava2:$project.ext.roomVersion"     // optional - RxJava support for Room
+    implementation "androidx.room:room-guava:$project.ext.roomVersion" // optional - Guava support for Room, including Optional and ListenableFuture
+    testImplementation "androidx.room:room-testing:$project.ext.roomVersion"     // Test helpers
+
+    implementation "com.android.support:design:$project.ext.designVersion"
+}

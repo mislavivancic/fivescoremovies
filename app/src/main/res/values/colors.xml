@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4F5B66</color>
+    <color name="colorPrimaryDark">#343D46</color>
+    <color name="colorAccent">#A4A6AF</color>
+    <color name="ratingStarColor">#FCDC7A</color>
+    <color name="ratingStarColorBackgroundTint">#1B180C</color>
+    <color name="colorTitle">#000</color>
+    <color name="colorOverview">#111D1D</color>
+    <color name="colorFavourite">#ff4162</color>
+    <color name="colorUnFavourite">#ffecef</color>
+    <color name="colorListItem">#DFDFDF</color>
+</resources>

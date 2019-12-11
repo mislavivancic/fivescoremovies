@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imagePosterView"
+        android:layout_width="@dimen/imageViewList_width"
+        android:layout_height="@dimen/imageViewList_height"
+        android:layout_marginBottom="@dimen/standard_margin_value"
+        android:layout_marginStart="@dimen/standard_margin_value"
+        android:layout_marginTop="@dimen/standard_margin_value"
+        android:scaleX="@dimen/scale_movie_poster"
+        android:scaleY="@dimen/scale_movie_poster"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="@dimen/zeroDp_textView_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_margin_value"
+        android:layout_marginStart="@dimen/standard_margin_value"
+        android:layout_marginTop="@dimen/title_row_marginTop"
+        android:padding="@dimen/list_text_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:textColor="@color/colorTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagePosterView"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RatingBar
+        android:id="@+id/ratingBarList"
+        style="@android:style/Widget.Material.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_margin_value"
+        android:layout_marginStart="@dimen/rating_bar_marginStartList"
+        android:layout_marginTop="@dimen/standard_margin_value"
+        android:isIndicator="true"
+        android:progressTint="@color/ratingStarColor"
+        android:scaleX="@dimen/scale_rating_listStars"
+        android:scaleY="@dimen/scale_rating_listStars"
+        app:layout_constraintBottom_toTopOf="@+id/popularityText"
+        app:layout_constraintStart_toStartOf="@+id/popularityText"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"/>
+
+    <TextView
+        android:id="@+id/popularityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_value"
+        android:text="@string/popularity"
+        android:textColor="@color/colorOverview"
+        android:textSize="@dimen/overview_font_size"
+        app:layout_constraintBottom_toBottomOf="@+id/popularityTextView"
+        app:layout_constraintEnd_toStartOf="@+id/popularityTextView"
+        app:layout_constraintStart_toEndOf="@+id/imagePosterView"
+        app:layout_constraintTop_toTopOf="@+id/popularityTextView"/>
+
+    <TextView
+        android:id="@+id/popularityTextView"
+        android:layout_width="@dimen/zeroDp_textView_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_margin_value"
+        android:layout_marginStart="@dimen/standard_margin_value"
+        android:textColor="@color/colorOverview"
+        android:textSize="@dimen/overview_font_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/popularityText"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

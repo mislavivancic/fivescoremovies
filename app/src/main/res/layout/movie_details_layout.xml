@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scrollView2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.MovieDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/imageView_marginEnd"
+            android:layout_marginStart="@dimen/imageView_marginStart"
+            android:layout_marginTop="@dimen/imageView_marginTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/linearLayout_movieTitle_marginTop"
+            android:background="@color/colorAccent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:layout_editor_absoluteX="@dimen/layoutAbsoluteX">
+
+            <TextView
+                android:id="@+id/movieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/movieTitle_textView_marginStart"
+                android:layout_marginTop="@dimen/movieTitle_textView_marginTop"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/title_font_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/genresTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin_value"
+                android:textColor="@color/colorOverview"
+                android:textSize="@dimen/overview_font_size"/>
+
+            <TextView
+                android:id="@+id/runtimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/movieTitle_textView_marginStart"
+                android:textColor="@color/colorOverview"
+                android:textSize="@dimen/overview_font_size"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/movieOverview"
+            android:layout_width="@dimen/zeroDp_textView_width"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/standard_margin_value"
+            android:layout_marginStart="@dimen/standard_margin_value"
+            android:layout_marginTop="@dimen/standard_margin_value"
+            android:textColor="@color/colorOverview"
+            android:textSize="@dimen/overview_font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearLayout_movieTitle_marginTop"
+            android:layout_marginTop="@dimen/standard_margin_value"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movieOverview">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/standard_margin_value"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@android:style/Widget.Material.Light.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stepSize="@dimen/rating_bar_step"
+                    android:layout_marginStart="@dimen/rating_bar_marginStart"
+                    android:isIndicator="true"
+                    android:numStars="@integer/numberOfStarsDetails"
+                    android:progressTint="@color/ratingStarColor"
+                    android:scaleX="@dimen/scale_rating_stars"
+                    android:scaleY="@dimen/scale_rating_stars"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/voteCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/voteCount_textView_marginBottom"
+                    android:layout_marginEnd="@dimen/voteCount_textView_marginEnd"
+                    android:textSize="@dimen/overview_font_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ratingBar"
+                    app:layout_constraintStart_toStartOf="@+id/ratingBar"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingBar"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/standard_margin_value"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutRating">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginBottom="@dimen/standard_margin_value"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/revenueText"
+                    android:layout_width="@dimen/zeroDp_textView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standard_margin_value"
+                    android:layout_marginTop="@dimen/standard_margin_value"
+                    android:text="@string/revenue"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/overview_font_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/revenueTextView"
+                    android:layout_width="@dimen/zeroDp_textView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standard_margin_value"
+                    android:textColor="@color/colorOverview"
+                    android:textSize="@dimen/overview_font_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/revenueText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/revenueText"
+                    app:layout_constraintTop_toTopOf="@+id/revenueText"/>
+
+                <TextView
+                    android:id="@+id/budgetText"
+                    android:layout_width="@dimen/zeroDp_textView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/standard_margin_value"
+                    android:layout_marginStart="@dimen/standard_margin_value"
+                    android:text="@string/budget"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/overview_font_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/revenueText"/>
+
+                <TextView
+                    android:id="@+id/budgetTextView"
+                    android:layout_width="@dimen/zeroDp_textView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standard_margin_value"
+                    android:textColor="@color/colorOverview"
+                    android:textSize="@dimen/overview_font_size"
+                    app:layout_constraintBottom_toBottomOf="@+id/budgetText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/budgetText"
+                    app:layout_constraintTop_toTopOf="@+id/budgetText"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
